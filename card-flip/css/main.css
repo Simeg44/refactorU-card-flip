@@ -1,0 +1,35 @@
+
+/*
+	You may find these CSS3 properties useful:;
+		transition
+		-webkit-transform
+		-webkit-transform-style
+		-webkit-backface-visibility
+*/
+
+.front {
+	position: absolute;
+	transition-duration: 1.5s;
+	/*-webkit-transform_style: preserve-3d;*/
+	-webkit-backface-visibility: hidden;
+}
+
+
+.back {
+	opacity: 0;
+	transition-duration: 1.5s;
+	/*-webkit-transform_style: preserve-3d;*/
+	-webkit-transform: rotateY(180deg);
+}
+
+.portfolio-item:hover .front {
+	opacity: 0;
+	-webkit-transform: rotateY(180deg);
+}
+
+.portfolio-item:hover .back{ 
+	opacity: 1;
+	-webkit-transform: rotateY(360deg);
+}
+
+
